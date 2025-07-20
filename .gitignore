@@ -18,9 +18,6 @@ env/
 dist/
 build/
 
-# Environment variables
-.env
-
 # SQLite database (if created locally)
 *.db
 
