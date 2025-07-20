@@ -1,3 +1,4 @@
+from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
@@ -16,7 +17,7 @@ class TaskRequest(BaseModel):
 class TaskResponse(BaseModel):
     id: int
     status: TaskStatus
-    result: str | None
+    result: Optional[str]  # Compatible with Python 3.7+
 
     class Config:
         orm_mode = True
